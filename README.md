@@ -3,7 +3,7 @@
 tw-htmlwidgets is a wrapper for R package [htmlwidgets](https://www.htmlwidgets.org/) to display interactive figures in [TiddlyWiki](https://tiddlywiki.com/).
 
 
-The following R packages have been wrappered into tw-htmlwidgets.
+The following R packages have been wrapped into tw-htmlwidgets.
 
 * [echarts4r](https://echarts4r.john-coene.com/)
 * [leaflet](https://rstudio.github.io/leaflet/)
