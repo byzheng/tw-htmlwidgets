@@ -1,0 +1,21 @@
+created: 20221028052301151
+modified: 20221028054443848
+tags: 
+title: $:/plugins/bangyou/tw-htmlwidgets/readme
+type: text/vnd.tiddlywiki
+
+; tw-htmlwidgets 
+
+tw-htmlwidgets is a wrapper for R package [[htmlwidgets|https://www.htmlwidgets.org/]] to display interactive figures in [[TiddlyWiki|https://tiddlywiki.com/]].
+
+The following R packages have been wrappered into tw-htmlwidgets.
+
+* [[echarts4r|https://echarts4r.john-coene.com/]]
+* [[leaflet|https://rstudio.github.io/leaflet/]]
+
+;Code and demo
+
+For learning plugin features, syntax, tutorial and examples see the plugin demo and code pages
+
+* Demo: https://tw-htmwidgets.bangyou.me
+* Code: https://github.com/byzheng/tw-htmlwidgets

@@ -1,0 +1,14 @@
+{
+    "title": "$:/plugins/bangyou/tw-htmlwidgets",
+    "name": "tw-htmlwidgets",
+    "description": "R package htmlwidgets in TiddlyWiki",
+    "author": "Bangyou Zheng",
+    "version": "0.0.1",
+    "core-version": "5.2.3",
+    "source": "https://github.com/byzheng/tw-htmlwidgets",
+    "list": "",
+    "parent-plugin": "",
+    "dependents": "",
+    "plugin-type": "plugin",
+    "packaged-by": "Gatha on 28th October 2022, 16:06:54"
+}
