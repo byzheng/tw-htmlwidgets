@@ -5,8 +5,8 @@ tw-htmlwidgets is a wrapper for R package [htmlwidgets](https://www.htmlwidgets.
 
 The following R packages have been wrappered into tw-htmlwidgets.
 
-* (echarts4r)[https://echarts4r.john-coene.com/]
-* (leaflet)[https://rstudio.github.io/leaflet/]
+* [echarts4r](https://echarts4r.john-coene.com/)
+* [leaflet](https://rstudio.github.io/leaflet/)
 
 # Tutorial
 * Open https://tw-htmlwidgets.bangyou.me/
