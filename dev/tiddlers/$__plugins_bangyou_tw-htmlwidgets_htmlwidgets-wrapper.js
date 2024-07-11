@@ -28,6 +28,7 @@ MyWidget.prototype = new Widget();
 Render this widget into the DOM
 */
 MyWidget.prototype.render = function(parent,nextSibling) {
+	try {
     this.parentDomNode = parent;
     this.computeAttributes();
 
@@ -55,7 +56,10 @@ MyWidget.prototype.render = function(parent,nextSibling) {
     containerSizing.dataset.for = uuid;   
     containerSizing.innerHTML=sizing;
     parent.insertBefore(containerSizing, nextSibling);
-window.HTMLWidgets.staticRender();
+		window.HTMLWidgets.staticRender();
+		} catch (error) {
+			 console.error(error);
+		};
 };
 
 

@@ -1,1 +1,4 @@
 *.bat
+dev/tiddlers/$__StoryList.tid
+
+dev/tiddlers/$__Import.tid
