@@ -28,12 +28,22 @@ MyWidget.prototype = new Widget();
 Render this widget into the DOM
 */
 MyWidget.prototype.render = function(parent,nextSibling) {
-	try {
+    try {
     this.parentDomNode = parent;
     this.computeAttributes();
 
     var type = this.getAttribute('type', '');
+		const supported_types = ["echarts4r", "leaflet"];
+		if (!supported_types.includes(type)) {
+		  throw new Error('Figure type is not supported');
+		}
+        
     var uuid = this.getAttribute('uuid', '');
+        
+	  if (uuid === "") {
+				uuid = (Math.random() + 1).toString(36).substring(3);
+		}
+        
     var containerDom = document.createElement('div');
     containerDom.id = uuid;
     containerDom.className = type  + " html-widget";
@@ -56,10 +66,10 @@ MyWidget.prototype.render = function(parent,nextSibling) {
     containerSizing.dataset.for = uuid;   
     containerSizing.innerHTML=sizing;
     parent.insertBefore(containerSizing, nextSibling);
-		window.HTMLWidgets.staticRender();
-		} catch (error) {
-			 console.error(error);
-		};
+        window.HTMLWidgets.staticRender();
+        } catch (error) {
+             console.error(error);
+        };
 };
 
 

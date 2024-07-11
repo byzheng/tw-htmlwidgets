@@ -1,8 +1,8 @@
 created: 20240711111819751
-modified: 20240711122901762
+modified: 20240711124411761
 tags: start
 title: data-leaflet example
 type: text/vnd.tiddlywiki
 
 
-<$htmlwidgets type="leaflet" uuid="htmlwidget-7f14e3a6784cbe0eabb9" data=<<data-leaflet "[tag[Place]]">> />
+<$htmlwidgets type="leaflet" data=<<data-leaflet "[tag[Place]]">> />
