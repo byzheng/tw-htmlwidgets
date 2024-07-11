@@ -1,0 +1,11 @@
+author: Bangyou Zheng
+created: 20221020061714535
+description: R package htmlwidgets in TiddlyWiki
+modified: 20221028060322910
+name: tw-htmlwidgets
+plugin-draft: plugin
+source: https://github.com/byzheng/tw-htmlwidgets
+tags: 
+title: $:/plugins/bangyou/tw-htmlwidgets
+type: application/json
+version: 0.0.1

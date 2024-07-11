@@ -1,0 +1,7 @@
+created: 20220727034051393
+modified: 20221028055219789
+tags: doc Contents tutorial
+title: Concept
+type: text/vnd.tiddlywiki
+
+All R packages which are supported by htmlwidgets can be exported from R into Tiddlywiki with an unique interface through js widget `htmlwidgets` and then display as interactive figures. 

@@ -1,0 +1,13 @@
+created: 20220213162905027
+modified: 20221103044809889
+tags: 
+title: $:/config/gatha/PublishFilter
+type: text/vnd.tiddlywiki
+
+[[$:/DefaultTiddlers]] [tag[doc]]
+[[$:/SiteTitle]]
+[[$:/SiteSubtitle]]
+[[$:/config/WikiParserRules/Inline/wikilink]]
+[[$:/plugins/kookma/shiraz]]
+[[$:/plugins/kookma/utility]]
+[subfilter{$:/DefaultTiddlers}]
