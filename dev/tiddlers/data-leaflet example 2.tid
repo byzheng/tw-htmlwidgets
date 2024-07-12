@@ -1,0 +1,8 @@
+created: 20240711142448502
+modified: 20240711142528117
+tags: start
+title: data-leaflet example 2
+type: text/vnd.tiddlywiki
+
+
+<$htmlwidgets type="leaflet" data=<<data-leaflet "[[Brisbane]]">> />
