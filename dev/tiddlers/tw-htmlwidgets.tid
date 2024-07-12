@@ -1,0 +1,11 @@
+caption: htmlwidgets
+created: 20240712123331559
+modified: 20240712123946881
+order: 10
+tags: doc Contents tutorial
+title: tw-htmlwidgets
+type: text/vnd.tiddlywiki
+
+[[tw-leaflet|$:/plugins/bangyou/tw-leaflet]] is a wrapper R package [[leaflet|https://rstudio.github.io/leaflet/]] with type `leaflet`.
+
+<<tabs tabsList:"[tag[demo]tag[htmlwidgets]sort[order]]" default:"doc/htmlwidgets-widget" class:"tc-horizontal">>

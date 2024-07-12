@@ -1,11 +1,11 @@
 created: 20180907045232431
-modified: 20240712044238976
+modified: 20240712123450470
 tags: start doc
 title: tw-htmlwidgets Tutorial
 type: text/vnd.tiddlywiki
 
 tw-htmlwidgets is a wrapper for R package [[htmlwidgets|https://www.htmlwidgets.org/]] to display interactive figures in [[TiddlyWiki|https://tiddlywiki.com/]].
 
-<<tabs tabsList:"[tag[tutorial]!tag[advanced]]" default:"Concept" class:"tc-vertical" template:"$:/tabs/tabTemplate" state:"$:/state/tab-tw-htmlwidgets-tutorial">>
+<<tabs tabsList:"[tag[tutorial]!tag[advanced]sort[order]]" default:"Concept" class:"tc-vertical" template:"$:/tabs/tabTemplate" state:"$:/state/tab-tw-htmlwidgets-tutorial">>
 
 

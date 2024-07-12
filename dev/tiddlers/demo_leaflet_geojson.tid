@@ -1,7 +1,9 @@
+caption: GEOJSON
 created: 20240712111612998
-modified: 20240712114938979
-tags: start
-title: geojson test
+modified: 20240712123207520
+order: 3
+tags: demo doc leaflet
+title: demo/leaflet/geojson
 type: text/vnd.tiddlywiki
 
 <$htmlwidgets type="leaflet" filter="[[data/geojson-example]addgeojson[text]] [setview[135],[-20],[7]]+[leaflet[]]" />

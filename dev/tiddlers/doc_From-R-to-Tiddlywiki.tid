@@ -1,7 +1,9 @@
+caption: From R to Tiddlywiki
 created: 20221103050238050
-modified: 20221103050546402
-tags: doc Contents tutorial
-title: From R to Tiddlywiki
+modified: 20240712124043909
+order: 20
+tags: doc demo htmlwidgets
+title: doc/From-R-to-Tiddlywiki
 type: text/vnd.tiddlywiki
 
 R package [[rtiddlywiki|https://rtiddlywiki.bangyou.me/]] can be used to generate a widget for Tiddlywiki, for example.
