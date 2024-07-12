@@ -1,0 +1,16 @@
+created: 20240712120034753
+modified: 20240712120156950
+tags: 
+title: $:/plugins/bangyou/tw-leaflet/readme
+type: text/vnd.tiddlywiki
+
+; tw-leaflet
+
+tw-leaflet is part of [[tw-htmlwidgets|$:/plugins/bangyou/tw-htmlwidgets]] and is a wrapper for R package [[leaflet|leaflet|https://rstudio.github.io/leaflet/]] to display interactive maps in [[TiddlyWiki|https://tiddlywiki.com/]].
+
+;Code and demo
+
+For learning plugin features, syntax, tutorial and examples see the plugin demo and code pages
+
+* Demo: https://tw-htmwidgets.bangyou.me
+* Code: https://github.com/byzheng/tw-htmlwidgets

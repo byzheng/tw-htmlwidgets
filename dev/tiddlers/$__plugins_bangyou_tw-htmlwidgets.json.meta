@@ -1,7 +1,8 @@
 author: Bangyou Zheng
 created: 20221020061714535
 description: R package htmlwidgets in TiddlyWiki
-modified: 20240712101052522
+list: readme history license
+modified: 20240712115754610
 name: tw-htmlwidgets
 plugin-draft: plugin
 source: https://github.com/byzheng/tw-htmlwidgets

@@ -1,10 +1,11 @@
 created: 20220213162905027
-modified: 20221103044809889
+modified: 20240712120756381
 tags: 
 title: $:/config/gatha/PublishFilter
 type: text/vnd.tiddlywiki
 
-[[$:/DefaultTiddlers]] [tag[doc]]
+[[$:/DefaultTiddlers]] 
+[all[tiddlers]!is[system]]
 [[$:/SiteTitle]]
 [[$:/SiteSubtitle]]
 [[$:/config/WikiParserRules/Inline/wikilink]]
