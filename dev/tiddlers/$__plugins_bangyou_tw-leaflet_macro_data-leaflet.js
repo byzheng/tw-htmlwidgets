@@ -54,9 +54,9 @@ exports.run = function(filter) {
 		}
 		markers_longitude.push(longitude_i);
 		markers_latitude.push(latitude_i);
-		
 		// Create popup
-		var popup_i = "<h4><a href=\"#" + encodeURIComponent(tiddlers[i]) + "\">" + tiddlers[i] + "</a></h4>";
+		//var popup_i = "<h4><a class=\"tc-tiddlylink tc-tiddlylink-resolves\" href=\"#" + encodeURIComponent(tiddlers[i]) + "\">" + tiddlers[i] + "</a></h4>";
+		var popup_i = "" + tiddlers[i] + "";
 		markers_popup.push(popup_i);
 	}
 	var obj =  {"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href='https://openstreetmap.org/copyright/'>OpenStreetMap<\/a>,  <a href='https://opendatacommons.org/licenses/odbl/'>ODbL<\/a>"}]},{"method":"addMarkers","args":[[42.0285,44.0285],[-93.65000000000001,-92.65000000000001],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[42.0285,44.0285],"lng":[-93.65000000000001,-92.65000000000001]}},"evals":[],"jsHooks":[]};
