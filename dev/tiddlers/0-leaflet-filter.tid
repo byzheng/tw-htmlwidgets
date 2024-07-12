@@ -1,0 +1,7 @@
+created: 20240712031504781
+modified: 20240712035956371
+tags: start
+title: 0-leaflet-filter
+type: text/vnd.tiddlywiki
+
+<$htmlwidgets type="leaflet" filter="[addtiles[]] [tag[Place]addmarkers[]] +[leaflet[]]" />

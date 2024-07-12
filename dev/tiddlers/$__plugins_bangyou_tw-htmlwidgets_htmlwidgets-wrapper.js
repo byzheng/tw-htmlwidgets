@@ -54,6 +54,17 @@ MyWidget.prototype.render = function(parent,nextSibling) {
 			parent.insertBefore(containerDom, nextSibling);
 
 			var text = this.getAttribute('data', '');
+			if (text === "") {
+				var filter = this.getAttribute('filter', '');
+				if (filter === "") {
+					 throw new Error('one of data or filter should be specified');
+				}
+				var tiddlers = $tw.wiki.filterTiddlers(filter);
+				if (tiddlers.length !== 1) {
+					 throw new Error('Only one item is expected');
+				}
+				text = tiddlers[0];
+			}
 			var containerScript= document.createElement('script');
 			containerScript.type = "application/json";
 			containerScript.dataset.for = uuid;   
