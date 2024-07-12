@@ -1,0 +1,34 @@
+{ "type": "FeatureCollection",
+  "features": [
+    { "type": "Feature",
+      "geometry": {"type": "Point", "coordinates": [130, -20]},
+      "properties": {"prop0": "value0"}
+      },
+    { "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [131.0, -20], [132.0, -20], [133.0, -20], [134.0, -20]
+          ]
+        },
+      "properties": {
+        "prop0": "value0",
+        "prop1": 0.0
+        }
+      },
+    { "type": "Feature",
+       "geometry": {
+         "type": "Polygon",
+         "coordinates": [
+           [ [135.0, -19], [137.0, -19], [137.0, -21],
+             [135.0, -22], [135, -19] ]
+           ]
+
+       },
+       "properties": {
+         "prop0": "value0",
+         "prop1": {"this": "that"}
+         }
+       }
+    ]
+  }

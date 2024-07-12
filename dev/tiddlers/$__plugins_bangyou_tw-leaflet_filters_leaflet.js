@@ -29,7 +29,11 @@ exports.leaflet = function(source,operator,options) {
 				if (call_i.method === "addTiles") {
 					has_tiles = true;
 				}
-				base_obj.x.calls.push(call_i);
+				if (call_i.method === "setView") {
+					base_obj.x.setView = call_i.args;
+				} else {
+					base_obj.x.calls.push(call_i);
+				}
 				// check limits
 				if (call_i.limits !== undefined) {
 					if (call_i.limits.lat[0] > limits.lat[0]) {
