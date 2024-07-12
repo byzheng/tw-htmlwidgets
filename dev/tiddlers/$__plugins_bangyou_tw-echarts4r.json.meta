@@ -1,7 +1,7 @@
 author: Bangyou Zheng
 created: 20221022063917482
 description: tw-echarts4r is a wrapper R package echarts4r.
-modified: 20221028060626465
+modified: 20240712101039268
 name: tw-echarts4r
 parent-plugin: $:/plugins/bangyou/tw-htmlwidgets
 plugin-draft: plugin
@@ -9,4 +9,4 @@ source: https://github.com/byzheng/tw-htmlwidgets
 tags: 
 title: $:/plugins/bangyou/tw-echarts4r
 type: application/json
-version: 0.0.1
+version: 0.1.0

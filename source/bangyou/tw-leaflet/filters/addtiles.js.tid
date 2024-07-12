@@ -1,0 +1,35 @@
+created: 20240712032047822
+creator: Bangyou Zheng
+modified: 20240712032151047
+modifier: Bangyou Zheng
+module-type: filteroperator
+revision: 0
+tags: 
+title: $:/plugins/bangyou/tw-leaflet/filters/addtiles.js
+type: application/javascript
+
+/*\
+title: $:/plugins/bangyou/tw-leaflet/filters/addtiles.js
+type: application/javascript
+module-type: filteroperator
+
+leaflet map
+
+\*/
+(function(){
+
+/*jslint node: true, browser: true */
+/*global $tw: false */
+"use strict";
+
+/*
+Export our filter function
+*/
+exports.addtiles = function(source,operator,options) {
+	var results = [];
+	var obj = {"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href='https://openstreetmap.org/copyright/'>OpenStreetMap<\/a>,  <a href='https://opendatacommons.org/licenses/odbl/'>ODbL<\/a>"}]};
+	results.push(JSON.stringify(obj));
+	return results;
+};
+
+})();

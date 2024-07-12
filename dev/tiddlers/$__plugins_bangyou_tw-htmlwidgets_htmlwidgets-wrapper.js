@@ -59,7 +59,7 @@ MyWidget.prototype.render = function(parent,nextSibling) {
 				if (filter === "") {
 					 throw new Error('one of data or filter should be specified');
 				}
-				var tiddlers = $tw.wiki.filterTiddlers(filter);
+				var tiddlers = this.wiki.filterTiddlers(filter, this);
 				if (tiddlers.length !== 1) {
 					 throw new Error('Only one item is expected');
 				}

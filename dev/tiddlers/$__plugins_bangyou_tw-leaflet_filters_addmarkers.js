@@ -25,6 +25,9 @@ exports.addmarkers = function(source,operator,options) {
 		return typeof value === 'number';
 	}
 	source(function(tiddler,title) {
+		if (tiddler === undefined) {
+			return;
+		}
 		if (tiddler.fields === undefined || tiddler.fields.point === undefined) {
 			return;
 		}

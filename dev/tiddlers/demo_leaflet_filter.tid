@@ -1,0 +1,27 @@
+caption: Filter
+created: 20240712031504781
+modified: 20240712101119736
+order: 2
+tags: leaflet demo
+title: demo/leaflet/filter
+type: text/vnd.tiddlywiki
+
+Filter operators also can be used to generate `leaflet` maps if data are stroed in the Tiddlywiki.
+
+For example, 
+
+```
+<$htmlwidgets type="leaflet" filter="[addtiles[]] [tag[Place]addmarkers[]] +[leaflet[]]" />
+```
+
+
+<$htmlwidgets type="leaflet" filter="[addtiles[]] [tag[Place]addmarkers[]] +[leaflet[]]" />
+
+
+If `addtiles` is missing, the default `openstreetmap` will be used.
+
+```
+<$htmlwidgets type="leaflet" filter="[tag[Place]addmarkers[]] +[leaflet[]]" />
+```
+
+<$htmlwidgets type="leaflet" filter="[tag[Place]addmarkers[]] +[leaflet[]]" />

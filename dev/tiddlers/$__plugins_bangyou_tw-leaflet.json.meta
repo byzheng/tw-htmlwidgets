@@ -2,7 +2,7 @@ author: Bangyou Zheng
 created: 20221028041253172
 description: tw-leafletis a wrapper R package leaflet.
 extra-tiddlers: 
-modified: 20221103043606153
+modified: 20240712101100704
 name: tw-leaflet
 packaged-by: Gatha on 3rd November 2022, 14:23:52
 parent-plugin: $:/plugins/bangyou/tw-htmlwidgets
@@ -11,4 +11,4 @@ source: https://github.com/byzheng/tw-htmlwidgets
 tags: 
 title: $:/plugins/bangyou/tw-leaflet
 type: application/json
-version: 0.0.1
+version: 0.1.0

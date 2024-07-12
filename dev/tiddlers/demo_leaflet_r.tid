@@ -1,0 +1,28 @@
+caption: R
+created: 20240712044055845
+modified: 20240712052620354
+order: 1
+tags: leaflet demo
+title: demo/leaflet/r
+type: text/vnd.tiddlywiki
+
+Leaflet maps can be generated with R package [ext[leaflet|https://rstudio.github.io/leaflet/]] and then `put` into your node.js server with [ext[rtiddlywiki|https://rtiddlywiki.bangyou.me/]].
+
+
+See an example R scripts below. Any features implemented in [ext[leaflet|https://rstudio.github.io/leaflet/]] can be reproduced in Tiddlywiki. 
+
+```r
+library(leaflet)
+m = leaflet() |> 
+    addTiles() |> 
+    addMarkers(-92.65, 42.0285)
+
+w <- rtiddlywiki::tw_widget(m)
+rtiddlywiki::put_tiddler("demo/leaflet/r", text = w)
+```
+
+
+<$htmlwidgets type="leaflet" uuid="htmlwidget-d587176cad4b27106fdc" data="""
+{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"https://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[-36.852,174.768,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"The birthplace of R",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[-36.852,-36.852],"lng":[174.768,174.768]}},"evals":[],"jsHooks":[]}
+
+"""/>

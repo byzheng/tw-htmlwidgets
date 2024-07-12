@@ -20,11 +20,15 @@ exports.leaflet = function(source,operator,options) {
 	// base object
 	var base_obj =  {"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[]},"evals":[],"jsHooks":[]};
 	var limits = {"lat": [-90, 90], "lng": [-180, 180]};
+	var has_tiles = false;
 	// add others into calls
 	source(function(tiddler,title) {
 		try {
 			var call_i = JSON.parse(title);
 			if (call_i.method !== undefined) {
+				if (call_i.method === "addTiles") {
+					has_tiles = true;
+				}
 				base_obj.x.calls.push(call_i);
 				// check limits
 				if (call_i.limits !== undefined) {
@@ -46,6 +50,10 @@ exports.leaflet = function(source,operator,options) {
 			console.error(error);
 		};
 	});
+	if (!has_tiles) {
+		var base_tiles = $tw.wiki.filterTiddlers("[addtiles[]]");
+		base_obj.x.calls.push(JSON.parse(base_tiles));
+	}
 	base_obj.x.limits = limits;
 	results.push(JSON.stringify(base_obj));
 	return results;
