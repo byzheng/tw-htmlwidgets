@@ -1,0 +1,32 @@
+caption: addgeojson
+created: 20240713083129429
+modified: 20240713083426079
+order: 52
+tags: leaflet demo doc
+title: demo/leaflet/filter/addgeojson
+type: text/vnd.tiddlywiki
+
+!! addgeojson
+
+Take geojson in tiddlers and generate a map layer with feature collections in geojson which is equivalent with R function [ext[addgeojson|https://rstudio.github.io/leaflet/reference/map-layers.html]].
+
+!! Syntax
+
+```
+[addgeojson[]]
+```
+
+|purpose |generate a map layer with geojson in tiddler |
+|input	|a selection of titles |
+|parameter |F=the name of a field, text in default |
+|output |json string for markers |
+
+
+!! Example
+
+```
+<$htmlwidgets type="leaflet" filter="[[data/geojson-example]addgeojson[text]] [setview[135],[-20],[7]]+[leaflet[]]" />
+```
+
+<$htmlwidgets type="leaflet" filter="[[data/geojson-example]addgeojson[text]] [setview[135],[-20],[7]]+[leaflet[]]" />
+

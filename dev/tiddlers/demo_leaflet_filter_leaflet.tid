@@ -1,0 +1,37 @@
+caption: addtiles
+created: 20240713082831022
+modified: 20240713083052271
+order: 40
+tags: leaflet demo doc
+title: demo/leaflet/filter/leaflet
+type: text/vnd.tiddlywiki
+
+!! leaflet
+
+Generate final json object for interactive map which has to be used in the final run with prefix `+` of whole filter.
+
+!! Syntax
+
+```
+[leaflet[]]
+```
+
+|purpose |generate final interactive map |
+|input	|no inputs |
+|output |json string for whole interactive map |
+
+!! Example
+
+```
+<$htmlwidgets type="leaflet" filter="[addtiles[]] +[leaflet[]]" />
+```
+
+<$htmlwidgets type="leaflet" filter="[addtiles[]] +[leaflet[]]" />
+
+If `addtiles` is missing in the whole filter, the default [ext[OpenStreetMap|https://www.openstreetmap.org/]] will be used.
+
+```
+<$htmlwidgets type="leaflet" filter="[leaflet[]]" />
+```
+
+<$htmlwidgets type="leaflet" filter="[leaflet[]]" />

@@ -1,15 +1,24 @@
 created: 20220727034051393
-modified: 20240712125007036
+modified: 20240713075443993
 order: 0
 tags: doc Contents tutorial
 title: Concept
 type: text/vnd.tiddlywiki
 
-
-
-All R packages which are supported by htmlwidgets can be exported from R into Tiddlywiki with an unique interface through js widget `htmlwidgets` and then display as interactive figures. 
+All R packages which are supported by htmlwidgets can be exported from R into Tiddlywiki with an unique interface through js widget `htmlwidgets` and then display as interactive figures. We could utilise all benefits of R to quickly data processing and visualisation to generate interactive figures. 
 
 !! From R to Tiddlywiki
 
+For R users, R scripts can be developed as normal ways to produce an interactive figure, then transfer into Tiddlywiki. R function [ext[tw_widget|https://rtiddlywiki.bangyou.me/reference/tw_widget.html]] can be used to produce Wikitext which will call [[htmlwidgets|doc/htmlwidgets-widget]] with specified data argument. 
 
-!! Filter operators
+* For node.js users, Wikitext can be directly `PUT` into Tiddlywiki through R function [ext[put_tiddler|https://rtiddlywiki.bangyou.me/reference/put_tiddler.html]].
+* For single file users, Wikitext can be saved into text file and manually copy into Tiddlywiki.
+
+See [[example R scripts|doc/From-R-to-Tiddlywiki]].
+
+!! Filter operator
+
+If your data already store in Tiddlywiki, or you want to dynamically generate interactive figures, several filter operators are developed to generate required json data for [[htmlwidgets|doc/htmlwidgets-widget]]. 
+
+
+

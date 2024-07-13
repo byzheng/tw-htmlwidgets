@@ -1,0 +1,40 @@
+caption: addtiles
+created: 20240713082502302
+modified: 20240713083102108
+order: 50
+tags: leaflet demo doc
+title: demo/leaflet/filter/addtiles
+type: text/vnd.tiddlywiki
+
+!! addtiles
+
+Generate a base map using [ext[OpenStreetMap|https://www.openstreetmap.org/]] in default which is equivalent with R function [ext[addTiles|https://rstudio.github.io/leaflet/reference/map-layers.html]].
+
+!! Syntax
+
+```
+[addtiles[]]
+```
+
+|purpose |generate a base map layer |
+|input	|no inputs |
+|output |json string for base map layer |
+
+!! Example
+
+```
+<$htmlwidgets type="leaflet" filter="[addtiles[]] +[leaflet[]]" />
+```
+
+<$htmlwidgets type="leaflet" filter="[addtiles[]] +[leaflet[]]" />
+
+If `addtiles` is missing in the whole filter, the default [ext[OpenStreetMap|https://www.openstreetmap.org/]] will be used.
+
+
+
+```
+<$htmlwidgets type="leaflet" filter="[leaflet[]]" />
+```
+
+<$htmlwidgets type="leaflet" filter="[leaflet[]]" />
+

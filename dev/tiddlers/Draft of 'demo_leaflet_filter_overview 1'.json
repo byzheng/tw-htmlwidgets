@@ -1,0 +1,14 @@
+[
+    {
+        "created": "20240713080802072",
+        "text": "Multiple filter operators are developed to generate interactive `leaflet` maps from tiddler(s) with following assumptions.\n\n* Whole filter generates the required json object for widget `htmlwidgets`.\n* Each filter run following and `add*` and `set*` operators as a layer in the map (e.g. `addmarkers`) or map configuration (e.g. `setview`). `add*` and `set*` operators is equivalent as the similar functions in `leaflet` package.\n* The final run has to be `+[leaflet[]]` which merges all layers and configurations to generate final json object.  \n\nFor example, there are three runs in the filter below \n\n```\n<$htmlwidgets type=\"leaflet\" filter=\"[addtiles[]] [tag[Place]addmarkers[]] +[leaflet[]]\" />\n```\n\n* `[addtiles[]]` to generate a base map using [ext[OpenStreetMap|https://www.openstreetmap.org/]] in default.\n* `[tag[Place]addmarkers[]]` to use `point` attributes in tiddlers with tag `Place` and then generate a marker layer.\n* `+[leaflet[]]` to generate final json object for interactive map.\n\n\n<$htmlwidgets type=\"leaflet\" filter=\"[addtiles[]] [tag[Place]addmarkers[]] +[leaflet[]]\" />\n\n\n\n\nIf `addtiles` is missing, the default `openstreetmap` will be used.\n\n```\n<$htmlwidgets type=\"leaflet\" filter=\"[tag[Place]addmarkers[]] +[leaflet[]]\" />\n```\n\n<$htmlwidgets type=\"leaflet\" filter=\"[tag[Place]addmarkers[]] +[leaflet[]]\" />\n\n",
+        "title": "Draft of 'demo/leaflet/filter/overview 1'",
+        "modified": "20240713080825522",
+        "tags": "leaflet demo doc",
+        "type": "text/vnd.tiddlywiki",
+        "draft.title": "demo/leaflet/filter/addtiles",
+        "caption": "add ",
+        "order": "50",
+        "draft.of": "demo/leaflet/filter/overview 1"
+    }
+]

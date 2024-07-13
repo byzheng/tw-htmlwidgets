@@ -1,0 +1,26 @@
+caption: Filter Overview
+created: 20240712031504781
+modified: 20240713080746279
+order: 2
+tags: leaflet demo doc
+title: demo/leaflet/filter/overview
+type: text/vnd.tiddlywiki
+
+Multiple filter operators are developed to generate interactive `leaflet` maps from tiddler(s) with following assumptions.
+
+* Whole filter generates the required json object for widget `htmlwidgets`.
+* Each filter run following and `add*` and `set*` operators as a layer in the map (e.g. `addmarkers`) or map configuration (e.g. `setview`). `add*` and `set*` operators is equivalent as the similar functions in `leaflet` package.
+* The final run has to be `+[leaflet[]]` which merges all layers and configurations to generate final json object.  
+
+For example, there are three runs in the filter below 
+
+```
+<$htmlwidgets type="leaflet" filter="[addtiles[]] [tag[Place]addmarkers[]] +[leaflet[]]" />
+```
+
+* `[addtiles[]]` to generate a base map using [ext[OpenStreetMap|https://www.openstreetmap.org/]] in default.
+* `[tag[Place]addmarkers[]]` to use `point` attributes in tiddlers with tag `Place` and then generate a marker layer.
+* `+[leaflet[]]` to generate final json object for interactive map.
+
+
+<$htmlwidgets type="leaflet" filter="[addtiles[]] [tag[Place]addmarkers[]] +[leaflet[]]" />
