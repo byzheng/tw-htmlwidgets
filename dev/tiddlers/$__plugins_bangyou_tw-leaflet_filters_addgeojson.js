@@ -49,11 +49,11 @@ exports.addgeojson = function(source,operator,options) {
                         "interactive": true,
                         "className": "",
                         "stroke": true,
-                        "color": "#03F",
+                        "color": null,
                         "weight": 5,
                         "opacity": 0.5,
                         "fill": true,
-                        "fillColor": "#03F",
+                        "fillColor": null,
                         "fillOpacity": 0.2,
                         "smoothFactor": 1,
                         "noClip": false

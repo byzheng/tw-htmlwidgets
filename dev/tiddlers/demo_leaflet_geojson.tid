@@ -1,6 +1,6 @@
 caption: GEOJSON
 created: 20240712111612998
-modified: 20240713000510556
+modified: 20240713072625149
 order: 3
 tags: demo doc leaflet
 title: demo/leaflet/geojson
@@ -13,13 +13,3 @@ type: text/vnd.tiddlywiki
 ```
 
 <$htmlwidgets type="leaflet" filter="[[data/geojson-example]addgeojson[text]] [setview[135],[-20],[7]]+[leaflet[]]" />
-
-
-
-!! Lazy load
-
-```
-<$htmlwidgets type="leaflet" filter="[[data/geojson-example-lazy]addgeojson[text]] [setview[135],[-20],[7]]+[leaflet[]]" />
-```
-
-<$htmlwidgets type="leaflet" filter="[[data/geojson-example-lazy]addgeojson[text]] [setview[135],[-20],[7]]+[leaflet[]]" />

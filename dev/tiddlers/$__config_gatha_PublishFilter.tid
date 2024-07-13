@@ -1,5 +1,5 @@
 created: 20220213162905027
-modified: 20240712205644796
+modified: 20240713073137280
 tags: 
 title: $:/config/gatha/PublishFilter
 type: text/vnd.tiddlywiki
@@ -11,6 +11,6 @@ type: text/vnd.tiddlywiki
 [[$:/config/WikiParserRules/Inline/wikilink]]
 [[$:/plugins/kookma/shiraz]]
 [[$:/plugins/kookma/utility]]
-[prefix[$:/plugins/bangyou/tw-echarts4r]]
-[prefix[$:/plugins/bangyou/tw-leaflet]]
+[prefix[$:/config/]]
+[prefix[$:/themes/]]
 [subfilter{$:/DefaultTiddlers}]

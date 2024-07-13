@@ -26,8 +26,13 @@
 
        },
        "properties": {
-         "prop0": "value0",
-         "prop1": {"this": "that"}
+        	"style":{"stroke": "#555555",
+			"stroke-width": 2,
+			"stroke-opacity": 1,
+			"fill": "#00aa22",
+			"fillOpacity": 0.5,
+									 "fillColor": "#c59bd4"
+									}
          }
        }
     ]
