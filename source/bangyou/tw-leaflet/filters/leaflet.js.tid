@@ -1,9 +1,9 @@
 created: 20230321215122983
 creator: Bangyou Zheng
-modified: 20240712101112327
+modified: 20240712114801129
 modifier: Bangyou Zheng
 module-type: filteroperator
-revision: 1
+revision: 0
 tags: 
 title: $:/plugins/bangyou/tw-leaflet/filters/leaflet.js
 type: application/javascript
@@ -39,7 +39,11 @@ exports.leaflet = function(source,operator,options) {
 				if (call_i.method === "addTiles") {
 					has_tiles = true;
 				}
-				base_obj.x.calls.push(call_i);
+				if (call_i.method === "setView") {
+					base_obj.x.setView = call_i.args;
+				} else {
+					base_obj.x.calls.push(call_i);
+				}
 				// check limits
 				if (call_i.limits !== undefined) {
 					if (call_i.limits.lat[0] > limits.lat[0]) {

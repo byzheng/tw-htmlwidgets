@@ -3,12 +3,12 @@
     "name": "tw-htmlwidgets",
     "description": "R package htmlwidgets in TiddlyWiki",
     "author": "Bangyou Zheng",
-    "version": "0.0.1",
-    "core-version": "5.2.3",
+    "version": "0.1.0",
+    "core-version": "5.3.3",
     "source": "https://github.com/byzheng/tw-htmlwidgets",
     "list": "",
     "parent-plugin": "",
     "dependents": "",
     "plugin-type": "plugin",
-    "packaged-by": "Gatha on 28th October 2022, 16:06:54"
+    "packaged-by": "Gatha on 12th July 2024, 21:55:06"
 }

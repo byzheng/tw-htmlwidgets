@@ -28,6 +28,7 @@ MyWidget.prototype = new Widget();
 Render this widget into the DOM
 */
 MyWidget.prototype.render = function(parent,nextSibling) {
+	  this.viewtiddlers = [];
     try {
 			this.parentDomNode = parent;
 			this.computeAttributes();
@@ -43,7 +44,7 @@ MyWidget.prototype.render = function(parent,nextSibling) {
 			if (uuid === "") {
 					uuid = (Math.random() + 1).toString(36).substring(3);
 			}
-
+			this.uuid = uuid;
 			var containerDom = document.createElement('div');
 			containerDom.id = uuid;
 			containerDom.className = type  + " html-widget";
@@ -64,6 +65,13 @@ MyWidget.prototype.render = function(parent,nextSibling) {
 					 throw new Error('Only one item is expected');
 				}
 				text = tiddlers[0];
+				
+				var text_json = JSON.parse(text);
+				for (let i = 0; i < text_json.x.calls.length; i++) {
+					if (text_json.x.calls[i].tiddlers) {
+						this.viewtiddlers.push(text_json.x.calls[i].tiddlers);
+					}
+				}
 			}
 			var containerScript= document.createElement('script');
 			containerScript.type = "application/json";
@@ -81,6 +89,34 @@ MyWidget.prototype.render = function(parent,nextSibling) {
 		} catch (error) {
 			console.error(error);
 		};
+};
+
+	
+/*
+Selectively refreshes the widget if needed. Returns true if the widget or any of its children needed re-rendering
+*/
+MyWidget.prototype.refresh = function(changedTiddlers) {
+	var changedAttributes = this.computeAttributes();
+	var is_changed_tiddler = false;
+	for (let i = 0; i < this.viewtiddlers.length; i++) {
+		if (changedTiddlers[this.viewtiddlers[i]]) {
+			is_changed_tiddler = true;
+			break;
+		}
+	}
+	if(changedAttributes.tiddler || changedAttributes.field || 
+		 changedAttributes.index || changedAttributes.template || 
+		 changedAttributes.format || is_changed_tiddler) {
+		// destory old on
+		if (this.uuid) {
+			var element = document.getElementById(this.uuid);
+			element.parentNode.removeChild(element);
+		}
+		this.refreshSelf();
+		return true;
+	} else {
+		return false;
+	}
 };
 
 

@@ -22,11 +22,21 @@ exports.addgeojson = function(source,operator,options) {
 		field = operator.operand;
 	}
 	var geo_json = {};
+	var data_tiddlers = [];
 	source(function(tiddler,title) {
 		if (tiddler === undefined || tiddler.fields === undefined) {
 			return;
 		}
-		geo_json = JSON.parse(tiddler.fields[field]);
+		var t_text;
+		if (field === "text") {
+			t_text = $tw.wiki.getTiddlerText(title);
+		} else {
+			t_text = tiddler.fields[field];
+		}
+		if (t_text) {
+			geo_json = JSON.parse(t_text);
+		}
+		data_tiddlers.push(title);
 		return;
 	});
 	var obj =  {
@@ -48,7 +58,8 @@ exports.addgeojson = function(source,operator,options) {
                         "smoothFactor": 1,
                         "noClip": false
                     }
-                ]
+                ],
+							"tiddlers": data_tiddlers
             };
 	results.push(JSON.stringify(obj));
 	return results;
