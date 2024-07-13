@@ -1,9 +1,10 @@
 created: 20240712120232953
-modified: 20240712120248568
+modified: 20240713094156485
 tags: 
 title: $:/plugins/bangyou/tw-leaflet/history
 type: text/vnd.tiddlywiki
 
-Full change log https://tw-htmwidgets.bangyou.me
+Full change log https://tw-htmlwidgets.bangyou.me/
 
-0.0.1 – 2022.11.03 – First public version release
+* 0.1.0 – 2024.07.13 – Add filter operator to plot interactive figures
+* 0.0.1 – 2022.11.03 – First public version release

@@ -1,5 +1,5 @@
 created: 20221021042001530
-modified: 20221028060419565
+modified: 20240713094355630
 tags: doc start
 title: htmlwidgets plugins for Tiddlywiki
 type: text/vnd.tiddlywiki
@@ -31,7 +31,7 @@ type: text/vnd.tiddlywiki
 * Demo: <<plugindemoUrl>>
 * Code: <<plugincodeUrl>>
 
-<$list filter="[tag[doc]tag[info]has[text]!hs[draft.of]]">
+<$list filter="[tag[doc]tag[info]has[text]!has[draft.of]]">
 <h2>{{!!title}}</h2>
 <blockquote><$transclude tiddler=<<currentTiddler>> mode=block/></blockquote>
 </$list>

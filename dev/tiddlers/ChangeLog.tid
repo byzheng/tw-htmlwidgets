@@ -1,8 +1,12 @@
 created: 20200312083811789
-modified: 20221103045503936
+modified: 20240713094527587
 tags: doc
 title: ChangeLog
 type: text/vnd.tiddlywiki
+
+!! Release 0.1.0 
+* ''13th July, 2024''
+* [NEW] Filter arguments to plot interactive figure with filter
 
 !! Release 0.0.1 
 * ''3rd November, 2022''
