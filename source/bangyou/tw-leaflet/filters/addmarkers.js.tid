@@ -1,9 +1,9 @@
 created: 20240712034833642
 creator: Bangyou Zheng
-modified: 20240712074545386
+modified: 20240713121712971
 modifier: Bangyou Zheng
 module-type: filteroperator
-revision: 0
+revision: 5
 tags: 
 title: $:/plugins/bangyou/tw-leaflet/filters/addmarkers.js
 type: application/javascript
@@ -56,8 +56,11 @@ exports.addmarkers = function(source,operator,options) {
 		markers_longitude.push(longitude_i);
 		markers_latitude.push(latitude_i);
 		// Create popup
-		//var popup_i = "<h4><a class=\"tc-tiddlylink tc-tiddlylink-resolves\" href=\"#" + encodeURIComponent(tiddlers[i]) + "\">" + tiddlers[i] + "</a></h4>";
-		var popup_i = "" + title + "";
+		var popup_i = "<h4><a class=\"tiddler-link tc-tiddlylink tc-tiddlylink-resolves\" href=\"#" + 
+				encodeURIComponent(title) + "\"" + 
+				"data-to=\"" + title + "\"" +
+				">" + title + "</a></h4>";
+		//var popup_i = "" + title + "";
 		markers_popup.push(popup_i);
 	});
 	var rng_lat = [Math.min(...markers_latitude), Math.max(...markers_latitude)];
@@ -102,7 +105,8 @@ exports.addmarkers = function(source,operator,options) {
 									},
 									null
                 ],
-							"limits": {"lat": rng_lat, "lng": rng_lng}
+              "limits": {"lat": rng_lat, "lng": rng_lng},
+              "haslink": true
             };
 	results.push(JSON.stringify(obj));
 	return results;

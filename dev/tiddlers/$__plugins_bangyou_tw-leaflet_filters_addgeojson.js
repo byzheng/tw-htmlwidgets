@@ -59,7 +59,7 @@ exports.addgeojson = function(source,operator,options) {
                         "noClip": false
                     }
                 ],
-							"tiddlers": data_tiddlers
+               "tiddlers": data_tiddlers
             };
 	results.push(JSON.stringify(obj));
 	return results;

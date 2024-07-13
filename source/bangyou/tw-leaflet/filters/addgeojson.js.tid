@@ -1,9 +1,9 @@
 created: 20240712112055860
 creator: Bangyou Zheng
-modified: 20240712234349760
+modified: 20240713115540625
 modifier: Bangyou Zheng
 module-type: filteroperator
-revision: 2
+revision: 1
 tags: 
 title: $:/plugins/bangyou/tw-leaflet/filters/addgeojson.js
 type: application/javascript
@@ -59,17 +59,17 @@ exports.addgeojson = function(source,operator,options) {
                         "interactive": true,
                         "className": "",
                         "stroke": true,
-                        "color": "#03F",
+                        "color": null,
                         "weight": 5,
                         "opacity": 0.5,
                         "fill": true,
-                        "fillColor": "#03F",
+                        "fillColor": null,
                         "fillOpacity": 0.2,
                         "smoothFactor": 1,
                         "noClip": false
                     }
                 ],
-							"tiddlers": data_tiddlers
+               "tiddlers": data_tiddlers
             };
 	results.push(JSON.stringify(obj));
 	return results;

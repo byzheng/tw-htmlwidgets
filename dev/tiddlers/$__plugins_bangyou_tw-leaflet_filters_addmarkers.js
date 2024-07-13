@@ -46,8 +46,11 @@ exports.addmarkers = function(source,operator,options) {
 		markers_longitude.push(longitude_i);
 		markers_latitude.push(latitude_i);
 		// Create popup
-		//var popup_i = "<h4><a class=\"tc-tiddlylink tc-tiddlylink-resolves\" href=\"#" + encodeURIComponent(tiddlers[i]) + "\">" + tiddlers[i] + "</a></h4>";
-		var popup_i = "" + title + "";
+		var popup_i = "<h4><a class=\"tiddler-link tc-tiddlylink tc-tiddlylink-resolves\" href=\"#" + 
+				encodeURIComponent(title) + "\"" + 
+				"data-to=\"" + title + "\"" +
+				">" + title + "</a></h4>";
+		//var popup_i = "" + title + "";
 		markers_popup.push(popup_i);
 	});
 	var rng_lat = [Math.min(...markers_latitude), Math.max(...markers_latitude)];
@@ -92,7 +95,8 @@ exports.addmarkers = function(source,operator,options) {
 									},
 									null
                 ],
-							"limits": {"lat": rng_lat, "lng": rng_lng}
+              "limits": {"lat": rng_lat, "lng": rng_lng},
+              "haslink": true
             };
 	results.push(JSON.stringify(obj));
 	return results;

@@ -1,5 +1,5 @@
 created: 20220213162905027
-modified: 20240713073137280
+modified: 20240713123238083
 tags: 
 title: $:/config/gatha/PublishFilter
 type: text/vnd.tiddlywiki
@@ -14,3 +14,4 @@ type: text/vnd.tiddlywiki
 [prefix[$:/config/]]
 [prefix[$:/themes/]]
 [subfilter{$:/DefaultTiddlers}]
+[[$:/tw-leaflet/viewtemplate/place]]
