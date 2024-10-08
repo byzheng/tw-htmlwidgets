@@ -8,8 +8,11 @@
         "modifier": "Bangyou Zheng",
         "tags": "Place Tasmania",
         "type": "text/vnd.tiddlywiki",
+        "revision": "0",
         "color": " #5588ab",
         "icon": "$:/images/google-material-design/maps/outlined/24px/place",
-        "point": "-42.88259651344035, 147.32127561477932"
+        "point": "-42.88259651344035, 147.32127561477932",
+        "latitude": "-42.8825965134403",
+        "longitude": "147.321275614779"
     }
 ]

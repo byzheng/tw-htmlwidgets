@@ -8,8 +8,11 @@
         "modifier": "Bangyou Zheng",
         "tags": "Place [[New South Wales]]",
         "type": "text/vnd.tiddlywiki",
+        "revision": "0",
         "color": " #5588ab",
         "icon": "$:/images/google-material-design/maps/outlined/24px/place",
-        "point": "-33.86377138448003, 151.2367751872672"
+        "point": "-33.86377138448003, 151.2367751872672",
+        "latitude": "-33.86377138448",
+        "longitude": "151.236775187267"
     }
 ]

@@ -8,8 +8,11 @@
         "modifier": "Bangyou Zheng",
         "tags": "Place [[Australian Capital Territory]]",
         "type": "text/vnd.tiddlywiki",
+        "revision": "0",
         "color": " #5588ab",
         "icon": "$:/images/google-material-design/maps/outlined/24px/place",
-        "point": "-35.277440166068565, 149.11328580804638"
+        "point": "-35.277440166068565, 149.11328580804638",
+        "latitude": "-35.2774401660686",
+        "longitude": "149.113285808046"
     }
 ]

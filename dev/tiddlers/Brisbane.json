@@ -8,8 +8,11 @@
         "modifier": "Bangyou Zheng",
         "tags": "Place Queensland",
         "type": "text/vnd.tiddlywiki",
+        "revision": "0",
         "color": " #5588ab",
         "icon": "$:/images/google-material-design/maps/outlined/24px/place",
-        "point": "-27.464625012442294, 153.02267875735203"
+        "point": "-27.464625012442294, 153.02267875735203",
+        "latitude": "-27.4646250124423",
+        "longitude": "153.022678757352"
     }
 ]

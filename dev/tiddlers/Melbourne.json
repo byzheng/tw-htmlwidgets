@@ -8,8 +8,11 @@
         "modifier": "Bangyou Zheng",
         "tags": "Place Victoria",
         "type": "text/vnd.tiddlywiki",
+        "revision": "0",
         "color": " #5588ab",
         "icon": "$:/images/google-material-design/maps/outlined/24px/place",
-        "point": "-37.8298529809373, 144.90730247204897"
+        "point": "-37.8298529809373, 144.90730247204897",
+        "latitude": "-37.8298529809373",
+        "longitude": "144.907302472049"
     }
 ]

@@ -1,15 +1,17 @@
 [
     {
         "created": "20231005234107622",
-        "creator": "Bangyou Zheng",
         "text": "",
+        "creator": "Bangyou Zheng",
         "title": "Darwin",
-        "modified": "20240313110644637",
+        "modified": "20241008040410438",
         "modifier": "Bangyou Zheng",
         "tags": "Place [[Northern Territory]]",
         "type": "text/vnd.tiddlywiki",
         "color": " #5588ab",
         "icon": "$:/images/google-material-design/maps/outlined/24px/place",
-        "point": "-12.400928655463666, 130.8336252454139"
+        "point": "-12.400928655463666, 130.8336252454139",
+        "latitude": "-12.4009286554637",
+        "longitude": "130.833625245414"
     }
 ]

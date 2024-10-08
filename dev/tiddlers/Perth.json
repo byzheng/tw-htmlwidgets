@@ -8,8 +8,11 @@
         "modifier": "Bangyou Zheng",
         "tags": "Place [[Western Australia]]",
         "type": "text/vnd.tiddlywiki",
+        "revision": "0",
         "color": " #5588ab",
         "icon": "$:/images/google-material-design/maps/outlined/24px/place",
-        "point": "-31.94051816531676, 115.84039776920055"
+        "point": "-31.94051816531676, 115.84039776920055",
+        "latitude": "-31.9405181653168",
+        "longitude": "115.840397769201"
     }
 ]

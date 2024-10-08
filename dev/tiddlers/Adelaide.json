@@ -10,6 +10,8 @@
         "type": "text/vnd.tiddlywiki",
         "color": " #5588ab",
         "icon": "$:/images/google-material-design/maps/outlined/24px/place",
-        "point": "-34.928294192716315, 138.61521062880493"
+        "point": "-34.928294192716315, 138.61521062880493",
+        "latitude": "-34.9282941927163",
+        "longitude": "138.615210628805"
     }
 ]
