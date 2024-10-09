@@ -15,15 +15,38 @@ Add markers for leaflet
 	/*
 	Export our filter function
 	*/
+	var utils = require("$:/plugins/bangyou/tw-htmlwidgets/utils.js").htmlwidgetsUtils;
 	exports.addmarkers = function (source, operator, options) {
+		// Check arguments
+		var argValues = operator.operands;
+		if (argValues.length === 1 && argValues[0] === "") {
+			argValues = [];
+		}
+		var argNames = [];
+		if (argValues.length > 0) {
+			if (operator.suffixes.length == 0) {
+				throw new Error('The variable values are provided. Please specify argument names, e.g. ' +
+					'addmarkers:longitude,latitude:[longitude],[latitude]'
+				);
+			}
+			if (operator.suffixes[0].length !== argValues.length) {
+				throw new Error('Please specify argument names with the same length of variable values, e.g. ' +
+					'addmarkers:longitude,latitude:[longitude],[latitude]'
+				);
+			}
+			argNames = operator.suffixes[0];
+		}
+
+		var point_field = utils.getArgumentValue(argNames, argValues, "point", "point");
+		var latitude_field = utils.getArgumentValue(argNames, argValues, "latitude", "latitude");
+		var longitude_field = utils.getArgumentValue(argNames, argValues, "longitude", "longitude");
+
 		var results = [];
 
 		var markers_latitude = [];
 		var markers_longitude = [];
-		var markers_popup = [];
-		function isNumber(value) {
-			return typeof value === 'number';
-		}
+		var markers_popup = [];  
+		var a = utils.isNumber(0);
 		source(function (tiddler, title) {
 			if (tiddler === undefined) {
 				return;
@@ -35,8 +58,8 @@ Add markers for leaflet
 			var longitude_i;
 
 			// Use point as coordinates
-			if (tiddler.fields.point !== undefined) {
-				var points = tiddler.fields.point.split(',');
+			if (tiddler.fields[point_field] !== undefined) {
+				var points = tiddler.fields[point_field].split(',');
 				if (points.length != 2) {
 					return;
 				}
@@ -44,16 +67,17 @@ Add markers for leaflet
 				longitude_i = points[1];
 			}
 			// Use longitude and latitude as coordinates
-			if (tiddler.fields.latitude !== undefined && tiddler.fields.longitude !== undefined) {
+			if (tiddler.fields[point_field] === undefined && 
+				tiddler.fields[latitude_field] !== undefined && tiddler.fields[longitude_field] !== undefined) {
 				
-				latitude_i = tiddler.fields.latitude;
-				longitude_i = tiddler.fields.longitude;
+				latitude_i = tiddler.fields[latitude_field];
+				longitude_i = tiddler.fields[longitude_field];
 			}
 			
 			// convert into int and check is a number
 			latitude_i = parseFloat(latitude_i);
 			longitude_i = parseFloat(longitude_i);
-			if (!isNumber(longitude_i) || !isNumber(latitude_i)) {
+			if (!utils.isNumber(longitude_i) || !utils.isNumber(latitude_i)) {
 				return;
 			}
 
@@ -64,6 +88,9 @@ Add markers for leaflet
 				encodeURIComponent(title) + "\"" +
 				"data-to=\"" + title + "\"" +
 				">" + title + "</a></h4>";
+			// $tw.wiki.renderTiddler("text/html", tooltipTemplate,
+            //         { variables: { currentTiddler: title } }
+            //     );
 			//var popup_i = "" + title + "";
 			markers_popup.push(popup_i);
 		});

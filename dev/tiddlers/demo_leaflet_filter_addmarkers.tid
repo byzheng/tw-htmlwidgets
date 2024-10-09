@@ -1,6 +1,6 @@
 caption: addmarkers
 created: 20240713080802072
-modified: 20241009015744625
+modified: 20241009101717517
 order: 51
 tags: leaflet demo doc
 title: demo/leaflet/filter/addmarkers
@@ -18,29 +18,56 @@ Take coordinates in tiddlers and generate a map layer with markers which is equi
 
 |purpose |generate a map layer with tiddler |
 |input	|a selection of titles |
+|suffix |the argument names, see below for details |
+|parameter|	argument values, see below for details |
 |output |json string for markers |
+
+
+The `addmarkers` operator uses multiple arguments with name and values to specify markers:
+
+```
+[addmarkers:<argument name>[<argument values>]]
+```
+
+* `argument name`: a comma delimited list of argument names which has the same length of `argument values`
+* `argument values`: a comma delimited list of argument values to match with the same order of `argument names`
+
+The supported arguments include
+
+* `point` with format `<latitude>,<longitude>` with default field `point`.
+* `longitude` and `latitude` with default fields `longitude` and `latitude`, respectively.
 
 !! Example
 
 
 !!! Marker coordinates
 
-If no parameters are specified in `addmarkers`, these fields of input tiddlers will consider as coordinates of markers in order, 
-
-* `point` with format `<latitude>,<longitude>`
-* `longitude` and `latitude`
+Field specified by argumwent `point` is used firstlym, and then fields specified by arguments `longitude` and `latitude`
 
 
-
-Use `point` as coordinates
+Use field `point` as coordinates if missing argument `point`
 
 
 <<wikitext-example src:"""<$htmlwidgets type="leaflet" filter="[addtiles[]] [tag[point]addmarkers[]] +[leaflet[]]" />""">>
 
 
-Use `longitude` and `latitude` as coordinates
+Alternatively, the a field can be specified with argument `point`
+
+<<wikitext-example src:"""<$htmlwidgets type="leaflet" filter="[addtiles[]] [tag[point]addmarkers:point[point]] +[leaflet[]]" />""">>
+
+
+Use fields `longitude` and `latitude` as coordinates if missing arguments `longitude` and `latitude`
 
 <<wikitext-example src:"""<$htmlwidgets type="leaflet" filter="[addtiles[]] [tag[coordinate]addmarkers[]] +[leaflet[]]" />""">>
+
+Alternatively, the fields can be specified with arguments `longitude` and `latitude`
+
+<<wikitext-example src:"""<$htmlwidgets type="leaflet" filter="[addtiles[]] [tag[coordinate]addmarkers:longitude,latitude[longitude],[latitude]] +[leaflet[]]" />""">>
+
+The orders of argument names and values should be matched. The example below will be renderred as the same map.
+
+<<wikitext-example src:"""<$htmlwidgets type="leaflet" filter="[addtiles[]] [tag[coordinate]addmarkers:latitude,longitude[latitude],[longitude]] +[leaflet[]]" />""">>
+
 
 
 !!! Popup
