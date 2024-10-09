@@ -1,6 +1,6 @@
 caption: addmarkers
 created: 20240713080802072
-modified: 20241009102603630
+modified: 20241009104522293
 order: 51
 tags: leaflet demo doc
 title: demo/leaflet/filter/addmarkers
@@ -34,8 +34,9 @@ The `addmarkers` operator uses multiple arguments with name and values to specif
 
 The supported arguments include
 
-* `point` with format `<latitude>,<longitude>` with default field `point`.
+* `point` using format `<latitude>,<longitude>` with default field `point`.
 * `longitude` and `latitude` with default fields `longitude` and `latitude`, respectively.
+* `popup` for a viewtemplate of marker popups.
 
 !! Example
 
@@ -75,5 +76,10 @@ The orders of argument names and values should be matched. The example below wil
 In default, the tiddler title and text if not empty are displayed in the popup.
 
 <<wikitext-example src:"""<$htmlwidgets type="leaflet" filter="[addtiles[]] [tag[point]addmarkers[]] +[leaflet[]]" />""">>
+
+
+Alternatively, popup is renderred using a viewtemplate specified by argument `popup` and if it exists, e.g. [[template/leaflet/popup]].
+
+<<wikitext-example src:"""<$htmlwidgets type="leaflet" filter="[addtiles[]] [tag[point]addmarkers:popup[template/leaflet/popup]] +[leaflet[]]" />""">>
 
 

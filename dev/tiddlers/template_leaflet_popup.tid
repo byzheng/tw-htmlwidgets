@@ -1,0 +1,11 @@
+created: 20241009103203796
+modified: 20241009104228985
+tags: 
+title: template/leaflet/popup
+type: text/vnd.tiddlywiki
+
+<div> 
+	<$view field="text" />
+	
+	<h2><$link>{{!!title}}</$link></h2>
+</div> 

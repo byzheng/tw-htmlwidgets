@@ -40,18 +40,22 @@ Add markers for leaflet
 		var point_field = utils.getArgumentValue(argNames, argValues, "point", "point");
 		var latitude_field = utils.getArgumentValue(argNames, argValues, "latitude", "latitude");
 		var longitude_field = utils.getArgumentValue(argNames, argValues, "longitude", "longitude");
+		var popup_tiddler = utils.getArgumentValue(argNames, argValues, "popup", null);
+		if (!$tw.wiki.tiddlerExists(popup_tiddler)) {
+			popup_tiddler = null;
+		}
 
 		var results = [];
 
 		var markers_latitude = [];
 		var markers_longitude = [];
-		var markers_popup = [];  
+		var markers_popup = [];
 		var a = utils.isNumber(0);
 		source(function (tiddler, title) {
 			if (tiddler === undefined) {
 				return;
 			}
-			if (tiddler.fields === undefined){
+			if (tiddler.fields === undefined) {
 				return;
 			}
 			var latitude_i;
@@ -67,13 +71,13 @@ Add markers for leaflet
 				longitude_i = points[1];
 			}
 			// Use longitude and latitude as coordinates
-			if (tiddler.fields[point_field] === undefined && 
+			if (tiddler.fields[point_field] === undefined &&
 				tiddler.fields[latitude_field] !== undefined && tiddler.fields[longitude_field] !== undefined) {
-				
+
 				latitude_i = tiddler.fields[latitude_field];
 				longitude_i = tiddler.fields[longitude_field];
 			}
-			
+
 			// convert into int and check is a number
 			latitude_i = parseFloat(latitude_i);
 			longitude_i = parseFloat(longitude_i);
@@ -84,16 +88,21 @@ Add markers for leaflet
 			markers_longitude.push(longitude_i);
 			markers_latitude.push(latitude_i);
 			// Create popup
-			var popup_i = "<h4><a class=\"tiddler-link tc-tiddlylink tc-tiddlylink-resolves\" href=\"#" +
-				encodeURIComponent(title) + "\"" +
-				"data-to=\"" + title + "\"" +
-				">" + title + "</a></h4>";
-			if (tiddler.fields.text !== undefined && tiddler.fields.text !== "") {
-				popup_i +=  "<p>" + tiddler.fields.text + "</p>";
+			var popup_i;
+			if (popup_tiddler === null) {
+				popup_i = "<h4><a class=\"tiddler-link tc-tiddlylink tc-tiddlylink-resolves\" href=\"#" +
+					encodeURIComponent(title) + "\"" +
+					"data-to=\"" + title + "\"" +
+					">" + title + "</a></h4>";
+				if (tiddler.fields.text !== undefined && tiddler.fields.text !== "") {
+					popup_i += "<p>" + tiddler.fields.text + "</p>";
+				}
+			} else {
+				popup_i = $tw.wiki.renderTiddler("text/html", popup_tiddler,
+					{ variables: { currentTiddler: title } }
+				);
 			}
-			// $tw.wiki.renderTiddler("text/html", tooltipTemplate,
-            //         { variables: { currentTiddler: title } }
-            //     );
+
 			//var popup_i = "" + title + "";
 			markers_popup.push(popup_i);
 		});
