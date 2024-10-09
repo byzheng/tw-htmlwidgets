@@ -1,6 +1,5 @@
 *.bat
 dev/tiddlers/$__StoryList.tid
-
+dev/tiddlers/$__config_Server*
 dev/tiddlers/$__Import.tid
-dev/tiddlers/$__config_*
 dev/tiddlers/000*

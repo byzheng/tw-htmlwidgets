@@ -3,7 +3,7 @@ created: 20221028041253172
 description: tw-leafletis a wrapper R package leaflet.
 extra-tiddlers: 
 list: readme history license
-modified: 20240712120222934
+modified: 20241009020547311
 name: tw-leaflet
 packaged-by: Gatha on 3rd November 2022, 14:23:52
 parent-plugin: $:/plugins/bangyou/tw-htmlwidgets
@@ -12,4 +12,4 @@ source: https://github.com/byzheng/tw-htmlwidgets
 tags: 
 title: $:/plugins/bangyou/tw-leaflet
 type: application/json
-version: 0.1.0
+version: 0.1.1
