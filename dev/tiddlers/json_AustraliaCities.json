@@ -1,0 +1,50 @@
+[
+  {
+    "Site": "Adelaide",
+    "Longitude": 138.6152,
+    "Latitude": -34.9283,
+    "Description": "Adelaide is South Australia’s cosmopolitan coastal capital. Its ring of parkland on the River Torrens is home to renowned museums such as the Art Gallery of South Australia, displaying expansive collections including noted Indigenous art, and the South Australian Museum, devoted to natural history. The city's Adelaide Festival is an annual international arts gathering with spin-offs including fringe and film events. "
+  },
+  {
+    "Site": "Brisbane",
+    "Longitude": 153.0227,
+    "Latitude": -27.4646,
+    "Description": "Brisbane, capital of Queensland, is a large city on the Brisbane River. Clustered in its South Bank cultural precinct are the Queensland Museum and Sciencentre, with noted interactive exhibitions. Another South Bank cultural institution is Queensland Gallery of Modern Art, among Australia's major contemporary art museums. Looming over the city is Mt. Coot-tha, site of Brisbane Botanic Gardens."
+  },
+  {
+    "Site": "Canberra",
+    "Longitude": 149.1133,
+    "Latitude": -35.2774,
+    "Description": "Canberra is Australia’s capital, inland from the country's southeast coast. Surrounded by forest, farmland and nature reserves, it earns its nickname, the \"Bush Capital.” The city's focal point is Lake Burley Griffin, filled with sailboats and kayaks. On the lakeshore is the massive, strikingly modern Parliament House, as well as museums including the National Gallery, known for its indigenous art collections. \n"
+  },
+  {
+    "Site": "Darwin",
+    "Longitude": 130.8336,
+    "Latitude": -12.4009,
+    "Description": "Darwin is the capital of Australia's Northern Territory and a former frontier outpost. It's also a gateway to massive Kakadu National Park."
+  },
+  {
+    "Site": "Hobart",
+    "Longitude": 147.3213,
+    "Latitude": -42.8826,
+    "Description": "Hobart, capital of Australia's island state of Tasmania, sits on the River Derwent. At its fashionable Salamanca Place, old sandstone warehouses host galleries and cafes. Nearby is Battery Point, a historic district with narrow lanes and colonial-era cottages. The city's backdrop is 1,270m-high Mount Wellington, with sweeping views, plus hiking and cycling trails."
+  },
+  {
+    "Site": "Melbourne",
+    "Longitude": 144.9073,
+    "Latitude": -37.8299,
+    "Description": "Melbourne is the coastal capital of the southeastern Australian state of Victoria. At the city's centre is the modern Federation Square development, with plazas, bars, and restaurants by the Yarra River. In the Southbank area, the Melbourne Arts Precinct is the site of Arts Centre Melbourne – a performing arts complex – and the National Gallery of Victoria, with Australian and indigenous art.\n"
+  },
+  {
+    "Site": "Perth",
+    "Longitude": 115.8404,
+    "Latitude": -31.9405,
+    "Description": "Perth, capital of Western Australia, sits where the Swan River meets the southwest coast. Sandy beaches line its suburbs, and the huge, riverside Kings Park and Botanic Garden on Mount Eliza offer sweeping views of the city. The Perth Cultural Centre houses the state ballet and opera companies, and occupies its own central precinct, including a theatre, library and the Art Gallery of Western Australia.\n"
+  },
+  {
+    "Site": "Sydney",
+    "Longitude": 151.2368,
+    "Latitude": -33.8638,
+    "Description": "Sydney, capital of New South Wales and one of Australia's largest cities, is best known for its harbourfront Sydney Opera House, with a distinctive sail-like design. Massive Darling Harbour and the smaller Circular Quay port are hubs of waterside life, with the arched Harbour Bridge and esteemed Royal Botanic Garden nearby. Sydney Tower’s outdoor platform, the Skywalk, offers 360-degree views of the city and suburbs. "
+  }
+]
