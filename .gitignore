@@ -2,3 +2,5 @@
 dev/tiddlers/$__StoryList.tid
 
 dev/tiddlers/$__Import.tid
+dev/tiddlers/$__config_*
+dev/tiddlers/000*
