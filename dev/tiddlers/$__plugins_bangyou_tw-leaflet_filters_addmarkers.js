@@ -88,6 +88,9 @@ Add markers for leaflet
 				encodeURIComponent(title) + "\"" +
 				"data-to=\"" + title + "\"" +
 				">" + title + "</a></h4>";
+			if (tiddler.fields.text !== undefined && tiddler.fields.text !== "") {
+				popup_i +=  "<p>" + tiddler.fields.text + "</p>";
+			}
 			// $tw.wiki.renderTiddler("text/html", tooltipTemplate,
             //         { variables: { currentTiddler: title } }
             //     );
