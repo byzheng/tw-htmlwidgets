@@ -1,6 +1,6 @@
 caption: addmarkers
 created: 20240713080802072
-modified: 20240713122656916
+modified: 20241009012657381
 order: 51
 tags: leaflet demo doc
 title: demo/leaflet/filter/addmarkers
@@ -22,10 +22,21 @@ Take coordinates in tiddlers and generate a map layer with markers which is equi
 
 !! Example
 
-```
-<$htmlwidgets type="leaflet" filter="[addtiles[]] [tag[Place]addmarkers[]] +[leaflet[]]" />
-```
 
-<$htmlwidgets type="leaflet" filter="[addtiles[]] [tag[Place]addmarkers[]] +[leaflet[]]" />
+!!! Marker coordinates
+
+If no parameters are specified in `addmarkers`, these fields of input tiddlers will consider as coordinates of markers in order, 
+
+* `point`
+* `longitude` and `latitude`
+
+<<wikitext-example src:"""<$htmlwidgets type="leaflet" filter="[addtiles[]] [tag[Place]addmarkers[]] +[leaflet[]]" />""">>
+
+
+!!! Popup
+
+In default, the tiddler title is displayed in the popup.
+
+<<wikitext-example src:"""<$htmlwidgets type="leaflet" filter="[addtiles[]] [tag[point]addmarkers[]] +[leaflet[]]" />""">>
 
 
