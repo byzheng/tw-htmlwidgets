@@ -30,31 +30,31 @@ htmlwidgets in tiddlywiki 5
 	MyWidget.prototype.render = function (parent, nextSibling) {
 		// Tiddlers to obtain data
 		this.viewtiddlers = [];
+
+		this.parentDomNode = parent;
+		this.computeAttributes();
+
+		var type = this.getAttribute('type', '');
+		const supported_types = ["echarts4r", "leaflet"];
+		if (!supported_types.includes(type)) {
+			throw new Error('Figure type is not supported');
+		}
+
+		var uuid = this.getAttribute('uuid', '');
+
+		if (uuid === "") {
+			uuid = (Math.random() + 1).toString(36).substring(3);
+		}
+		this.uuid = uuid;
+		var containerDom = document.createElement('div');
+		containerDom.id = uuid;
+		containerDom.className = type + " html-widget";
+		containerDom.style.width = "100%";
+		containerDom.style.height = "500px";
+
+
+		parent.insertBefore(containerDom, nextSibling);
 		try {
-			this.parentDomNode = parent;
-			this.computeAttributes();
-
-			var type = this.getAttribute('type', '');
-			const supported_types = ["echarts4r", "leaflet"];
-			if (!supported_types.includes(type)) {
-				throw new Error('Figure type is not supported');
-			}
-
-			var uuid = this.getAttribute('uuid', '');
-
-			if (uuid === "") {
-				uuid = (Math.random() + 1).toString(36).substring(3);
-			}
-			this.uuid = uuid;
-			var containerDom = document.createElement('div');
-			containerDom.id = uuid;
-			containerDom.className = type + " html-widget";
-			containerDom.style.width = "100%";
-			containerDom.style.height = "500px";
-
-
-			parent.insertBefore(containerDom, nextSibling);
-
 			var text = this.getAttribute('data', '');
 			if (text === "") {
 				var filter = this.getAttribute('filter', '');
@@ -149,6 +149,7 @@ htmlwidgets in tiddlywiki 5
 			parent.insertBefore(containerSizing, nextSibling);
 			window.HTMLWidgets.staticRender();
 		} catch (error) {
+			parent.innerHTML = error;
 			console.error(error);
 		};
 	};

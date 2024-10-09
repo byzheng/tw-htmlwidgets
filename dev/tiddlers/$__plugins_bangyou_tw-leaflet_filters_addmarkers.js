@@ -24,7 +24,7 @@ Add markers for leaflet
 		}
 		var argNames = [];
 		if (argValues.length > 0) {
-			if (operator.suffixes.length == 0) {
+			if (operator.suffixes === undefined || operator.suffixes.length == 0) {
 				throw new Error('The variable values are provided. Please specify argument names, e.g. ' +
 					'addmarkers:longitude,latitude:[longitude],[latitude]'
 				);
