@@ -1,14 +1,13 @@
 [
     {
         "created": "20231005203442166",
+        "text": "Brisbane, capital of Queensland, is a large city on the Brisbane River. Clustered in its South Bank cultural precinct are the Queensland Museum and Sciencentre, with noted interactive exhibitions. Another South Bank cultural institution is Queensland Gallery of Modern Art, among Australia's major contemporary art museums. Looming over the city is Mt. Coot-tha, site of Brisbane Botanic Gardens.",
         "creator": "Bangyou Zheng",
-        "text": "",
         "title": "Brisbane",
-        "modified": "20240313104253356",
+        "modified": "20241009010700467",
         "modifier": "Bangyou Zheng",
         "tags": "Place Queensland",
         "type": "text/vnd.tiddlywiki",
-        "revision": "0",
         "color": " #5588ab",
         "icon": "$:/images/google-material-design/maps/outlined/24px/place",
         "point": "-27.464625012442294, 153.02267875735203",

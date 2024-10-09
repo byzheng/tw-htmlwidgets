@@ -1,14 +1,13 @@
 [
     {
         "created": "20231005101438667",
+        "text": "Perth, capital of Western Australia, sits where the Swan River meets the southwest coast. Sandy beaches line its suburbs, and the huge, riverside Kings Park and Botanic Garden on Mount Eliza offer sweeping views of the city. The Perth Cultural Centre houses the state ballet and opera companies, and occupies its own central precinct, including a theatre, library and the Art Gallery of Western Australia.\n",
         "creator": "Bangyou Zheng",
-        "text": "",
         "title": "Perth",
-        "modified": "20240313112123750",
+        "modified": "20241009010855891",
         "modifier": "Bangyou Zheng",
         "tags": "Place [[Western Australia]]",
         "type": "text/vnd.tiddlywiki",
-        "revision": "0",
         "color": " #5588ab",
         "icon": "$:/images/google-material-design/maps/outlined/24px/place",
         "point": "-31.94051816531676, 115.84039776920055",

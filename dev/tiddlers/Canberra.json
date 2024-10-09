@@ -1,14 +1,13 @@
 [
     {
         "created": "20231005211346509",
+        "text": "Canberra is Australia’s capital, inland from the country's southeast coast. Surrounded by forest, farmland and nature reserves, it earns its nickname, the \"Bush Capital.” The city's focal point is Lake Burley Griffin, filled with sailboats and kayaks. On the lakeshore is the massive, strikingly modern Parliament House, as well as museums including the National Gallery, known for its indigenous art collections. \n",
         "creator": "Bangyou Zheng",
-        "text": "",
         "title": "Canberra",
-        "modified": "20240313110109594",
+        "modified": "20241009010748451",
         "modifier": "Bangyou Zheng",
         "tags": "Place [[Australian Capital Territory]]",
         "type": "text/vnd.tiddlywiki",
-        "revision": "0",
         "color": " #5588ab",
         "icon": "$:/images/google-material-design/maps/outlined/24px/place",
         "point": "-35.277440166068565, 149.11328580804638",

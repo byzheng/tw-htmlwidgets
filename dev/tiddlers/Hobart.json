@@ -1,14 +1,13 @@
 [
     {
         "created": "20231005201156535",
+        "text": "Hobart, capital of Australia's island state of Tasmania, sits on the River Derwent. At its fashionable Salamanca Place, old sandstone warehouses host galleries and cafes. Nearby is Battery Point, a historic district with narrow lanes and colonial-era cottages. The city's backdrop is 1,270m-high Mount Wellington, with sweeping views, plus hiking and cycling trails.",
         "creator": "Bangyou Zheng",
-        "text": "",
         "title": "Hobart",
-        "modified": "20240313110934711",
+        "modified": "20241009010914384",
         "modifier": "Bangyou Zheng",
         "tags": "Place Tasmania",
         "type": "text/vnd.tiddlywiki",
-        "revision": "0",
         "color": " #5588ab",
         "icon": "$:/images/google-material-design/maps/outlined/24px/place",
         "point": "-42.88259651344035, 147.32127561477932",
